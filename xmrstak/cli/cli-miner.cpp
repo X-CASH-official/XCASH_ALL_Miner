@@ -207,7 +207,7 @@ void do_guided_pool_config()
 	{
 		prompt_once(prompted);
 
-		std::string tmp = "cryptonight_xcash";
+		std::string tmp = "cryptonight_HeavyX";
 		
 		currency = tmp;
 	}

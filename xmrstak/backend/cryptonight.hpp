@@ -25,7 +25,7 @@ enum xmrstak_algo_id
 	cryptonight_gpu = 13,
 
 	cryptonight_turtle = start_derived_algo_id,
-	cryptonight_xcash = (start_derived_algo_id + 1),
+	cryptonight_HeavyX = (start_derived_algo_id + 1),
 	cryptonight_v8_zelerius = (start_derived_algo_id + 2)
 	// please add the algorithm name to get_algo_name()
 };
@@ -57,7 +57,7 @@ inline std::string get_algo_name(xmrstak_algo_id algo_id)
 	static std::array<std::string, 3> derived_algo_names =
 	{{
 		"cryptonight_turtle",
-		"cryptonight_xcash", // used by masari and stellite
+		"cryptonight_HeavyX", // used by masari and stellite
 		"cryptonight_v8_zelerius"
 	}};
 
@@ -192,7 +192,7 @@ inline xmrstak_algo POW(xmrstak_algo_id algo_id)
 	static std::array<xmrstak_algo, 3> derived_pow =
 	{{
 		{cryptonight_turtle, cryptonight_monero_v8, CN_ITER/8, CN_MEMORY/8, CN_TURTLE_MASK},
-		{cryptonight_xcash, cryptonight_monero_v8, CN_ITER*2, CN_MEMORY},
+		{cryptonight_HeavyX, cryptonight_monero_v8, CN_ITER*2, CN_MEMORY},
 		{cryptonight_v8_zelerius, cryptonight_monero_v8, CN_ZELERIUS_ITER, CN_MEMORY}
 		// {cryptonight_derived}
 	}};
