@@ -1,31 +1,21 @@
-###### fireice-uk's and psychocrypt's
-# XMR-Stak - Cryptonight All-in-One Mining Software
+# XCASH_ALL_Miner
 
-XMR-Stak is a universal Stratum pool miner. This miner supports CPUs, AMD and NVIDIA GPUs and can be used to mine the crypto currencies Monero, Aeon and many more Cryptonight coins.
+XCASH_ALL_Miner is a universal Stratum pool miner. This miner supports CPUs, AMD and NVIDIA GPUs and can be used to mine XCASH.
 
-## HTML reports
-<img src="https://gist.githubusercontent.com/fireice-uk/2da301131ac01695ff79539a27b81d68/raw/4c09cdeee86f94df2e9dd86b927e64aded6184f5/xmr-stak-cpu-hashrate.png" width="260"> <img src="https://gist.githubusercontent.com/fireice-uk/2da301131ac01695ff79539a27b81d68/raw/4c09cdeee86f94df2e9dd86b927e64aded6184f5/xmr-stak-cpu-results.png" width="260"> <img src="https://gist.githubusercontent.com/fireice-uk/2da301131ac01695ff79539a27b81d68/raw/4c09cdeee86f94df2e9dd86b927e64aded6184f5/xmr-stak-cpu-connection.png" width="260">
-
-## Video setup guide on Windows
-
-[<img src="https://gist.githubusercontent.com/fireice-uk/3621b179d56f57a8ead6303d8e415cf6/raw/f572faba67cc9418116f3c1dfd7783baf52182ce/vidguidetmb.jpg">](https://youtu.be/YNMa8NplWus)
-###### Video by Crypto Sewer
+XCASH_ALL_Miner hash 0% dev fee.
 
 ## Overview
 * [Features](#features)
-* [Supported altcoins](#supported-altcoins)
 * [Download](#download)
-* [Usage](doc/usage.md)
-* [HowTo Compile](doc/compile.md)
-* [FAQ](doc/FAQ.md)
-* [Developer Donation](#default-developer-donation)
-* [Developer PGP Key's](doc/pgp_keys.md)
+* [Creating config file](#creating-config-file)
+* [Changing Settings](#changing-settings)
+* [Usage](#usage)
+* [Build](#build)
 
 ## Features
 
 - support all common backends (CPU/x86, AMD-GPU and NVIDIA-GPU)
 - support all common OS (Linux, Windows and macOS)
-- supports algorithm cryptonight for Monero (XMR) and cryptonight-light (AEON)
 - easy to use
   - guided start (no need to edit a config file for the first start)
   - auto-configuration for each backend
@@ -34,65 +24,96 @@ XMR-Stak is a universal Stratum pool miner. This miner supports CPUs, AMD and NV
 - [HTML statistics](doc/usage.md#html-and-json-api-report-configuraton)
 - [JSON API for monitoring](doc/usage.md#html-and-json-api-report-configuraton)
 
-## Supported altcoins
-
-Besides [Monero](https://getmonero.org), following coins can be mined using this miner:
-
-- [Aeon](http://www.aeon.cash)
-- [BBSCoin](https://www.bbscoin.xyz)
-- [BitTube](https://coin.bit.tube/)
-- [Graft](https://www.graft.network)
-- [Haven](https://havenprotocol.com)
-- [Lethean](https://lethean.io)
-- [Masari](https://getmasari.org)
-- [Plenteum](https://www.plenteum.com/)
-- [QRL](https://theqrl.org)
-- **[Ryo](https://ryo-currency.com) - Upcoming xmr-stak-gui is sponsored by Ryo**
-- [Stellite](https://stellite.cash/)
-- [TurtleCoin](https://turtlecoin.lol)
-- [Zelerius](https://zelerius.org/)
-
-Ryo currency is a way for us to implement the ideas that we were unable to in
-Monero. See [here](https://github.com/fireice-uk/cryptonote-speedup-demo/) for details.
-
-If your prefered coin is not listed, you can choose one of the following algorithms:
-- 256Kib scratchpad memory
-    - cryptonight_turtle
-- 1MiB scratchpad memory
-    - cryptonight_lite
-    - cryptonight_lite_v7
-    - cryptonight_lite_v7_xor (algorithm used by ipbc)
-- 2MiB scratchpad memory
-    - cryptonight
-    - cryptonight_gpu (for Ryo's 14th of Feb fork)
-    - cryptonight_masari (used in 2018)
-    - cryptonight_v7
-    - cryptonight_v7_stellite
-    - cryptonight_v8
-    - cryptonight_v8_half (used by masari and stellite)
-    - cryptonight_v8_zelerius
-- 4MiB scratchpad memory
-    - cryptonight_haven
-    - cryptonight_heavy
-
-Please note, this list is not complete and is not an endorsement.
-
 ## Download
 
-You can find the latest releases and precompiled binaries on GitHub under [Releases](https://github.com/fireice-uk/xmr-stak/releases).
+You can find the latest releases and precompiled binaries on GitHub under [Releases](https://github.com/X-CASH-official/XCASH_ALL_Miner/releases).
 
-## Default Developer Donation
+## Creating config file
 
-By default, the miner will donate 2% of the hashpower (2 minutes in 100 minutes) to my pool. If you want to change that, edit [donate-level.hpp](xmrstak/donate-level.hpp) before you build the binaries.
+If you dont have any config files, it is best to let the software generate them for you. To do this, run the software with no options  
+`XCASH_ALL_Miner`
 
-If you want to donate directly to support further development, here is my wallet
+#1 It will first ask you for a local port on your computer, to run the http server to allow you to check your stats on another device on your network.
 
-fireice-uk:
-```
-4581HhZkQHgZrZjKeCfCJxZff9E3xCgHGF25zABZz7oR71TnbbgiS7sK9jveE6Dx6uMs2LwszDuvQJgRZQotdpHt1fTdDhk
-```
+8000 is usually a good port to use.
 
-psychocrypt:
-```
-45tcqnJMgd3VqeTznNotiNj4G9PQoK67TGRiHyj6EYSZ31NUbAfs9XdiU5squmZb717iHJLxZv3KfEw8jCYGL5wa19yrVCn
-```
+#2 Then it will ask you for a pool address:port
+
+#3 It will then ask for the wallet address you want to mine to
+
+#4 Next it will ask for the password. You usually can put x here
+
+#5 Now it will ask for the Rig identifier, which you can leave empty
+
+#6 It will now ask if you want to use SSL
+
+#7 It will now ask if you want to use nicehash
+
+#8 It will now ask if you want to configure a backup pool
+
+At this point, let it generate the config files, and then when it says connected to pool you can close the software.
+
+## Changing settings
+
+You will now have a pools.txt file. This file will allow you to change your address and pool at any time
+
+You will now have a cpu.txt file. This file will allow you to change the settings to try to get the best performance for your CPU.
+
+You might have a nvidia.txt file. This file will allow you to change the settings to try to get the best performance for your NVIDIA GPU.
+
+You might have a amd.txt file. This file will allow you to change the settings to try to get the best performance for your AMD GPU.
+
+## Usage
+* To mine using all avaible components for your machine  
+`XCASH_ALL_Miner`
+
+* To mine using only the CPU  
+`XCASH_ALL_Miner --noAMD --noNVIDIA`
+
+* To mine using only an NVIDIA GPU  
+`XCASH_ALL_Miner --noCPU --noAMD`
+
+* To mine using only an AMD GPU  
+`XCASH_ALL_Miner --noCPU --noNVIDIA`
+
+## Build
+### Linux(Ubuntu)
+
+#1 If you want to mine using AMD, you will need to download the [AMD drivers](https://www.amd.com/en/support)  
+Once downloaded, unzip the file and then cd into the folder. Then run  
+`sudo dpkg --add-architecture i386 && ./amdgpu-pro-install --opencl=legacy,palclear`  
+Press y to install the packages.
+
+#2 If you want to mine using NVIDIA, you will need to install [CUDA toolkit](https://developer.nvidia.com/cuda-downloads?target_os=Linux)  
+Choose the .DEB file  
+Once downloaded run  
+`sudo dpkg -i cuda*.deb`  
+It will say the cuda key is not installed, so run the command it gives and then run  
+`sudo dpkg -i cuda*.deb && sudo apt update && sudo apt install cuda && export PATH=/usr/local/cuda-10.0/bin${PATH:+:${PATH}}`
+
+#3 Clone the repo and build a static build (remove export AMDAPPSDKROOT=/opt/amdgpu-pro/ && cmake -DOpenCL_INCLUDE_DIR=/usr/lib/x86_64-linux-gnu/ . if not using AMD)  
+`git clone https://github.com/X-CASH-official/XCASH_ALL_Miner.git && cd XCASH_ALL_Miner && export AMDAPPSDKROOT=/opt/amdgpu-pro/ && cmake -DOpenCL_INCLUDE_DIR=/usr/lib/x86_64-linux-gnu/ . -DCMAKE_LINK_STATIC=ON -DXMR-STAK_COMPILE=generic . && make install && cd bin`
+
+### Windows
+* Install [Visual Studio 2017 Community Edition](https://visualstudio.microsoft.com/downloads/)  
+make sure to select `Desktop development with C++` and `VC++ 2017 version 15.4 v14.11 toolset` in Individual Components => Compilers, build tools, and runtimes
+
+* Install [CMAKE](https://cmake.org/download/)
+
+* Download [precompiled binaries](https://github.com/fireice-uk/xmr-stak-dep/releases/download/v2/xmr-stak-dep.zip)
+
+#1 If you want to mine using AMD, you will need to download the [AMD drivers](https://www.amd.com/en/support)  
+You will also need the [OCL-SDK](https://github.com/GPUOpen-LibrariesAndSDKs/OCL-SDK/releases)
+
+#2 If you want to mine using NVIDIA, you will need to install [CUDA toolkit](https://developer.nvidia.com/cuda-downloads?target_os=Windows)  
+
+#3 Clone the repo  
+`git clone https://github.com/X-CASH-official/XCASH_ALL_Miner.git && cd XCASH_ALL_Miner`
+
+#4 Build  
+Close the command prompt window and naviagte into the XCASH_ALL_Miner folder  
+Then open a new command prompt window and run  
+`"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvarsall.bat" x64 -vcvars_ver=14.11`
+
+The run the following to build (replace DIRECTORY_FOR_PRECOMPILED_BINARIES with the directory where you unzipped the precompiled binaries)  
+`mkdir build && cd build && set CMAKE_PREFIX_PATH=DIRECTORY_FOR_PRECOMPILED_BINARIES\hwloc;DIRECTORY_FOR_PRECOMPILED_BINARIES\libmicrohttpd;DIRECTORY_FOR_PRECOMPILED_BINARIES\openssl && cmake -G "Visual Studio 15 2017 Win64" -T v141,host=x64 .. && cmake --build . --config Release --target install && cd bin\Release && copy C:\xmr-stak-dep\openssl\bin\* .`
