@@ -1,4 +1,4 @@
-project(xmr-stak)
+project(XCASH_ALL_Miner)
 
 cmake_minimum_required(VERSION 3.4.0)
 

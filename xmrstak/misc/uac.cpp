@@ -41,7 +41,7 @@ BOOL SelfElevate(const std::string& my_path, const std::string& params)
 		return FALSE;
 
 	// Loiter in the background to make scripting easier
-	printer::inst()->print_msg(L0, "This window has been opened because xmr-stak needed to run as administrator.  It can be safely closed now.");
+	printer::inst()->print_msg(L0, "This window has been opened because XCASH_ALL_Miner needed to run as administrator.  It can be safely closed now.");
 	WaitForSingleObject(shExecInfo.hProcess, INFINITE);
 	std::exit(0);
 

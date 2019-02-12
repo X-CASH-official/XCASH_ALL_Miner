@@ -17,8 +17,8 @@
 #define BACKEND_TYPE unknown
 #endif
 
-#define XMR_STAK_NAME "xmr-stak"
-#define XMR_STAK_VERSION "2.8.2"
+#define XMR_STAK_NAME "XCASH_ALL_Miner"
+#define XMR_STAK_VERSION "1.0.0"
 
 #if defined(_WIN32)
 #define OS_TYPE "win"
