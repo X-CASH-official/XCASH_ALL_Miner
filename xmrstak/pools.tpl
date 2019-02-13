@@ -20,7 +20,7 @@ POOLCONF],
 /*
  * Currency to mine. Supported values:
  *
- *    cryptonight_HeavyX
+ *    cryptonight_heavyx
  *
  */
 
